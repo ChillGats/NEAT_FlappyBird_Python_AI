@@ -22,7 +22,7 @@ $$\mathbf{x} \in \mathbb{R}^6 \xrightarrow{\text{Linear}(6, 16)} \mathbf{h} \in 
 ### 3. Vectorized Genetic Operators
 - **Uniform Tensor Crossover**: Generates offspring weights by blending parent genomes via vectorized boolean sampling without Python loop overhead:
   $$\mathbf{W}_{\text{child}} = \mathbf{M} \odot \mathbf{W}_{\text{P1}} + (1 - \mathbf{M}) \odot \mathbf{W}_{\text{P2}}, \quad \mathbf{M} \sim \text{Bernoulli}(0.5)$$
-- **Gaussian Mutation with Bounded Perturbation**: Perturbs a fraction ($\alpha = \text{mutation\_rate}$) of parameters with zero-mean Gaussian noise $\mathcal{N}(0, \sigma^2)$ to prevent catastrophic forgetting.
+- **Gaussian Mutation with Bounded Perturbation**: Perturbs a fraction $\alpha$ (mutation rate) of parameters with zero-mean Gaussian noise $\mathcal{N}(0, \sigma^2)$ to prevent catastrophic forgetting.
 
 ---
 
